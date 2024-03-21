@@ -32,6 +32,7 @@ class NeumorphicApp extends StatelessWidget {
   final bool showSemanticsDebugger;
   final Map<LogicalKeySet, Intent>? shortcuts;
   final Map<Type, Action<Intent>>? actions;
+  final ScrollBehavior? scrollBehavior;
 
   final bool debugShowMaterialGrid;
 
@@ -39,6 +40,7 @@ class NeumorphicApp extends StatelessWidget {
     Key? key,
     this.title = '',
     this.color,
+    this.scrollBehavior,
     this.initialRoute,
     this.routes = const {},
     this.home,
@@ -107,6 +109,7 @@ class NeumorphicApp extends StatelessWidget {
           child: MaterialApp(
               title: title,
               color: color,
+              scrollBehavior: scrollBehavior, 
               theme: materialTheme,
               darkTheme: materialDarkTheme,
               initialRoute: initialRoute,
